@@ -1,0 +1,677 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const works = [
+  {
+    id: 'Aart-1',
+    title: 'Aart1',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart1.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart1.jfif'],
+  },
+  {
+    id: 'Aart-2',
+    title: 'Aart2',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart2.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart2.jfif'],
+  },
+  {
+    id: 'Aart-3',
+    title: 'Aart3',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart3.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart3.jfif'],
+  },
+  {
+    id: 'Aart-4',
+    title: 'Aart4',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart4.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart4.jfif'],
+  },
+  {
+    id: 'Aart-5',
+    title: 'Aart5',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart5.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart5.jfif'],
+  },
+  {
+    id: 'Aart-6',
+    title: 'Aart6',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart6.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart6.jfif'],
+  },
+  {
+    id: 'Aart-7',
+    title: 'Aart7',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart7.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart7.jfif'],
+  },
+  {
+    id: 'Aart-8',
+    title: 'Aart8',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart8.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart8.jfif'],
+  },
+  {
+    id: 'Aart-9',
+    title: 'Aart9',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart9.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart9.jfif'],
+  },
+  {
+    id: 'Aart-10',
+    title: 'Aart10',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart10.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart10.jfif'],
+  },
+  {
+    id: 'Aart-11',
+    title: 'Aart11',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart11.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart11.jfif'],
+  },
+  {
+    id: 'Aart-12',
+    title: 'Aart12',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart12.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart12.jfif'],
+  },
+  {
+    id: 'Aart-13',
+    title: 'Aart13',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart13.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart13.jfif'],
+  },
+  {
+    id: 'Aart-14',
+    title: 'Aart14',
+    category: 'illust-a',
+    thumbnail: '/BOGO-art/works/Aart14.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Aart14.jfif'],
+  },
+  {
+    id: 'Bart-1',
+    title: 'Bart1',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart1.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart1.jfif'],
+  },
+  {
+    id: 'Bart-2',
+    title: 'Bart2',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart2.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart2.jfif'],
+  },
+  {
+    id: 'Bart-3',
+    title: 'Bart3',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart3.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart3.jfif'],
+  },
+  {
+    id: 'Bart-4',
+    title: 'Bart4',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart4.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart4.jfif'],
+  },
+  {
+    id: 'Bart-5',
+    title: 'Bart5',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart5.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart5.jfif'],
+  },
+  {
+    id: 'Bart-6',
+    title: 'Bart6',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart6.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart6.jfif'],
+  },
+  {
+    id: 'Bart-7',
+    title: 'Bart7',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart7.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart7.jfif'],
+  },
+  {
+    id: 'Bart-8',
+    title: 'Bart8',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart8.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart8.jfif'],
+  },
+  {
+    id: 'Bart-9',
+    title: 'Bart9',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart9.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart9.jfif'],
+  },
+  {
+    id: 'Bart-10',
+    title: 'Bart10',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart10.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart10.jfif'],
+  },
+  {
+    id: 'Bart-11',
+    title: 'Bart11',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart11.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart11.jfif'],
+  },
+  {
+    id: 'Bart-12',
+    title: 'Bart12',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart12.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart12.jfif'],
+  },
+  {
+    id: 'Bart-13',
+    title: 'Bart13',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart13.jfif',
+    description: '',
+    images: ['/BOGO-art/works/Bart13.jfif'],
+  },
+  {
+    id: 'Bart-14',
+    title: 'Bart14',
+    category: 'illust-b',
+    thumbnail: '/BOGO-art/works/Bart14.jfif',
+    description: '',
+    images: ['/BOGO-art/works/art10.jfif'],
+  },
+  {
+    id: 'anim-1',
+    title: 'animation1',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/QA-COeEx6FA/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/QA-COeEx6FA',
+  },
+  {
+    id: 'anim-2',
+    title: 'animation2',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/Z4mPB89ewGI/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/Z4mPB89ewGI',
+  },
+  {
+    id: 'anim-3',
+    title: 'animation3',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/zuHR2KosH2I/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/zuHR2KosH2I',
+  },
+  {
+    id: 'anim-4',
+    title: 'animation4',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/1EvqRAjEI7U/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/1EvqRAjEI7U',
+  },
+  {
+    id: 'anim-5',
+    title: 'animation5',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/fmvetM6Wjuw/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/fmvetM6Wjuw',
+  },
+  {
+    id: 'anim-6',
+    title: 'animation6',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/qwSHq-7Avvk/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/qwSHq-7Avvk',
+  },
+  {
+    id: 'anim-7',
+    title: 'animation7',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/EY7LCG3WIQI/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/EY7LCG3WIQI',
+  },
+  {
+    id: 'anim-8',
+    title: 'animation8',
+    category: 'animation',
+    thumbnail: 'https://img.youtube.com/vi/s746RJehZvY/hqdefault.jpg',
+    description: '',
+    video: 'https://www.youtube.com/embed/s746RJehZvY',
+  },
+]
+
+const categories = [
+  { key: 'all', label: '전체' },
+  { key: 'illustration', label: '일러스트' },
+  { key: 'animation', label: '애니메이션' },
+]
+---
+
+<Layout title="Portfolio — 일러스트 & 애니메이션">
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center px-6 max-w-6xl mx-auto scroll-snap-section -mt-20">
+    <h1 class="text-7xl md:text-9xl font-bold tracking-tight mb-4">
+      BOGO
+    </h1>
+    <p class="text-xl text-zinc-400 mb-2">Illustrator & Animator</p>
+    <p class="text-zinc-500 text-zinc-500 max-w-md">
+      감성있는 캐릭터와 공간감 있는 배경 일러스트를 만듭니다.
+    </p>
+  </section>
+
+
+  <!-- Works -->
+  <section id="works" class="max-w-6xl mx-auto px-6 pt-4 pb-6 h-screen scroll-snap-section">
+    <!-- Works Landing -->
+    <div id="works-landing" class="flex flex-col items-center justify-center h-[80vh]">
+      <h2 class="text-6xl md:text-8xl font-bold mb-12">Works</h2>
+      <div class="flex gap-6">
+        <button class="works-landing-btn w-64 h-36 rounded-xl text-xl font-medium text-white relative overflow-hidden transition-transform hover:scale-105" data-tab="tab-illust-a">
+          <img src="/BOGO-art/works/Aart7.jfif" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.6]" />
+          <span class="relative z-10 font-bold drop-shadow-lg">동화<br/>일러스트</span>
+        </button>
+        <button class="works-landing-btn w-64 h-36 rounded-xl text-xl font-medium text-white relative overflow-hidden transition-transform hover:scale-105" data-tab="tab-illust-b">
+          <img src="/BOGO-art/works/Bart4.jfif" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.6]" />
+          <span class="relative z-10 font-bold drop-shadow-lg">캐릭터<br/>일러스트</span>
+        </button>
+        <button class="works-landing-btn w-64 h-36 rounded-xl text-xl font-bold text-white relative overflow-hidden transition-transform hover:scale-105" data-tab="tab-animation">
+          <img src="https://img.youtube.com/vi/QA-COeEx6FA/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.6]" />
+          <span class="relative z-10 font-bold drop-shadow-lg">애니메이션</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Works Content (hidden initially) -->
+    <div id="works-content" class="hidden h-[80vh]">
+      <div class="flex items-center gap-4 mb-8">
+        <h2 class="text-3xl font-bold">Works</h2>
+        <div class="flex gap-2">
+          <button id="tab-illust-a" class="tab-btn px-4 py-2 rounded-full text-sm bg-white text-zinc-900 transition-colors">동화 일러스트</button>
+          <button id="tab-illust-b" class="tab-btn px-4 py-2 rounded-full text-sm bg-zinc-800 text-zinc-400 hover:bg-zinc-700 transition-colors">캐릭터 일러스트</button>
+          <button id="tab-animation" class="tab-btn px-4 py-2 rounded-full text-sm bg-zinc-800 text-zinc-400 hover:bg-zinc-700 transition-colors">애니메이션</button>
+        </div>
+      </div>
+
+    <!-- Illust A View -->
+    <div id="view-illust-a" class="flex h-[80vh] gap-4">
+      <div class="flex flex-col items-center justify-center gap-2 pr-2" id="dots-a">
+        {works.filter(w => w.category === 'illust-a').map((_, i) => (
+          <div class:list={['illust-a-dot w-2 h-2 rounded-full transition-all', i === 0 ? 'bg-white' : 'bg-zinc-600']} />
+        ))}
+      </div>
+      <div class="w-[10%] overflow-y-auto flex flex-col gap-2 work-list-container" id="work-list">
+        {[0,1,2].map(() =>
+          works.filter(w => w.category === 'illust-a').map((work, i) => (
+            <button
+              class:list={[
+                'work-list-item rounded-lg overflow-hidden transition-all border-2 shrink-0',
+                'border-transparent hover:border-zinc-400'
+              ]}
+              data-index={i}
+              data-src={work.thumbnail}
+              data-title={work.title}
+            >
+              <img src={work.thumbnail} alt={work.title} class="w-full aspect-square object-cover" />
+            </button>
+          ))
+        )}
+      </div>
+      <div class="w-[90%] flex items-center justify-center">
+        <img
+          id="preview-image-a"
+          src={works.filter(w => w.category === 'illust-a')[0].thumbnail}
+          alt={works.filter(w => w.category === 'illust-a')[0].title}
+          class="max-w-full max-h-full object-contain rounded-xl transition-opacity duration-300"
+        />
+      </div>
+    </div>
+
+    <!-- Illust B View -->
+    <div id="view-illust-b" class="hidden flex h-[80vh] gap-4">
+      <div class="flex flex-col items-center justify-center gap-2 pr-2" id="dots-b">
+        {works.filter(w => w.category === 'illust-b').map((_, i) => (
+          <div class:list={['illust-b-dot w-2 h-2 rounded-full transition-all', i === 0 ? 'bg-white' : 'bg-zinc-600']} />
+        ))}
+      </div>
+      <div class="w-[10%] overflow-y-auto flex flex-col gap-2 work-list-container" id="work-list-b">
+        {[0,1,2].map(() =>
+          works.filter(w => w.category === 'illust-b').map((work, i) => (
+            <button
+              class:list={[
+                'work-list-item-b rounded-lg overflow-hidden transition-all border-2 shrink-0',
+                'border-transparent hover:border-zinc-400'
+              ]}
+              data-index={i}
+              data-src={work.thumbnail}
+              data-title={work.title}
+            >
+              <img src={work.thumbnail} alt={work.title} class="w-full aspect-square object-cover" />
+            </button>
+          ))
+        )}
+      </div>
+      <div class="w-[90%] flex items-center justify-center">
+        <img
+          id="preview-image-b"
+          src={works.filter(w => w.category === 'illust-b')[0].thumbnail}
+          alt={works.filter(w => w.category === 'illust-b')[0].title}
+          class="max-w-full max-h-full object-contain rounded-xl transition-opacity duration-300"
+        />
+      </div>
+    </div>
+
+    <!-- Animation View -->
+    <div id="view-animation" class="hidden h-[80vh] overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 content-start">
+      {works.filter(w => w.category === 'animation').map(work => (
+        <div class="anim-item aspect-video rounded-xl overflow-hidden cursor-pointer relative group" data-video={work.video}>
+          <img src={work.thumbnail} alt={work.title} class="w-full h-full object-cover" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+      ))}
+    </div>
+    </div>
+  </section>
+
+  <!-- About + Contact -->
+  <div class="scroll-snap-section min-h-screen">
+  <section id="about" class="max-w-3xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-8">About</h2>
+    <div class="grid md:grid-cols-[1fr_2fr] gap-10">
+      <img src="/BOGO-art/works/mainchara.jpg" alt="BOGO" class="w-32 h-32 rounded-full object-cover" />
+      <div>
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          안녕하세요, BOGO입니다.<br />
+          일러스트와 애니메이션 전문 아티스트입니다.
+        </p>
+        <div class="mt-6">
+          <h3 class="text-sm font-medium text-zinc-400 mb-2">경력</h3>
+          <ul class="text-zinc-300 text-sm space-y-1 mb-6">
+            <li>- 트릭컬 공식 만화작가</li>
+            <li>- 펌프잇업 애니메이션 작업</li>
+          </ul>
+          <h3 class="text-sm font-medium text-zinc-400 mb-2">사용 툴</h3>
+          <div class="flex flex-wrap gap-2">
+            {['Clip Studio', 'ibis Paint'].map(tool => (
+              <span class="px-3 py-1 bg-zinc-800 rounded-full text-sm text-zinc-300">{tool}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-8">Contact</h2>
+    <p class="text-zinc-300 mb-6">yahonumber20@gmail.com</p>
+    <div class="flex flex-col gap-3 text-zinc-400">
+      <a href="#" class="hover:text-white transition-colors">Twitter (한국계정)</a>
+      <a href="#" class="hover:text-white transition-colors">Twitter (해외계정)</a>
+      <a href="#" class="hover:text-white transition-colors">Pixiv</a>
+      <a href="#" class="hover:text-white transition-colors">YouTube</a>
+    </div>
+  </section>
+
+  <footer class="border-t border-zinc-800 py-8 text-center text-sm text-zinc-400">
+    &copy; 2026 BOGO. All rights reserved.
+  </footer>
+  </div>
+</Layout>
+
+
+<script>
+  // Setup list viewer for both A and B
+  function setupListViewer(listId: string, itemClass: string, previewId: string, dotClass: string) {
+    const dots = document.querySelectorAll(`.${dotClass}`)
+    const listItems = document.querySelectorAll(`.${itemClass}`)
+    const previewImage = document.getElementById(previewId) as HTMLImageElement
+    const workList = document.getElementById(listId)!
+
+    const totalItems = listItems.length
+    const setSize = totalItems / 3
+    const firstOfMiddle = listItems[setSize] as HTMLElement
+    workList.scrollTop = firstOfMiddle.offsetTop - workList.offsetTop
+
+    let currentSrc = ''
+    let mouseX = 0, mouseY = 0
+    let scrolling = false
+    let scrollTimer: number
+    let dragging = false
+    let dragStartY = 0
+    let dragScrollTop = 0
+
+    function updatePreview() {
+      const el = document.elementFromPoint(mouseX, mouseY)?.closest(`.${itemClass}`) as HTMLElement | null
+      if (!el) return
+      const src = el.dataset.src!
+      if (src === currentSrc) return
+      currentSrc = src
+      const title = el.dataset.title!
+      previewImage.style.opacity = '0'
+      setTimeout(() => {
+        previewImage.src = src
+        previewImage.alt = title
+        previewImage.style.opacity = '1'
+      }, 150)
+
+      listItems.forEach(li => {
+        li.classList.remove('border-zinc-900')
+        li.classList.add('border-transparent')
+      })
+      el.classList.remove('border-transparent')
+      el.classList.add('border-zinc-900')
+
+      const idx = parseInt(el.dataset.index!)
+      dots.forEach((d, i) => {
+        if (i === idx) {
+          d.classList.remove('bg-zinc-600')
+          d.classList.add('bg-white')
+        } else {
+          d.classList.remove('bg-white')
+          d.classList.add('bg-zinc-600')
+        }
+      })
+    }
+
+    workList.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX
+      mouseY = e.clientY
+      if (dragging) {
+        const delta = dragStartY - e.clientY
+        workList.scrollTop = dragScrollTop + delta
+        return
+      }
+      if (!scrolling) updatePreview()
+    })
+
+    workList.addEventListener('mousedown', (e) => {
+      dragging = true
+      dragStartY = e.clientY
+      dragScrollTop = workList.scrollTop
+      workList.style.cursor = 'grabbing'
+      e.preventDefault()
+    })
+
+    window.addEventListener('mouseup', () => {
+      if (dragging) {
+        dragging = false
+        workList.style.cursor = 'grab'
+        updatePreview()
+      }
+    })
+
+    workList.style.cursor = 'grab'
+
+    workList.addEventListener('scroll', () => {
+      scrolling = true
+      clearTimeout(scrollTimer)
+      scrollTimer = window.setTimeout(() => {
+        scrolling = false
+        updatePreview()
+      }, 50)
+    })
+
+    workList.addEventListener('scrollend', () => {
+      const scrollTop = workList.scrollTop
+      const scrollHeight = workList.scrollHeight
+      const oneSetHeight = scrollHeight / 3
+      if (scrollTop < oneSetHeight * 0.3) {
+        workList.scrollTop = scrollTop + oneSetHeight
+      } else if (scrollTop > oneSetHeight * 1.7) {
+        workList.scrollTop = scrollTop - oneSetHeight
+      }
+    })
+  }
+
+  setupListViewer('work-list', 'work-list-item', 'preview-image-a', 'illust-a-dot')
+  setupListViewer('work-list-b', 'work-list-item-b', 'preview-image-b', 'illust-b-dot')
+
+  // Works landing
+  const worksLanding = document.getElementById('works-landing')!
+  const worksContent = document.getElementById('works-content')!
+
+  document.querySelectorAll('.works-landing-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      worksLanding.classList.add('hidden')
+      worksContent.classList.remove('hidden')
+      const tabId = (btn as HTMLElement).dataset.tab!
+      document.getElementById(tabId)!.click()
+    })
+  })
+
+  // Tab switching
+  const tabA = document.getElementById('tab-illust-a')!
+  const tabB = document.getElementById('tab-illust-b')!
+  const tabAnim = document.getElementById('tab-animation')!
+  const viewA = document.getElementById('view-illust-a')!
+  const viewB = document.getElementById('view-illust-b')!
+  const viewAnim = document.getElementById('view-animation')!
+
+  const allTabs = [tabA, tabB, tabAnim]
+  const allViews = [viewA, viewB, viewAnim]
+  const activeClass = ['bg-white', 'text-zinc-900']
+  const inactiveClass = ['bg-zinc-800', 'text-zinc-400']
+
+  function switchTab(activeTab: HTMLElement, activeView: HTMLElement) {
+    allViews.forEach(v => v.classList.add('hidden'))
+    activeView.classList.remove('hidden')
+    allTabs.forEach(t => {
+      t.classList.remove(...activeClass)
+      t.classList.add(...inactiveClass)
+    })
+    activeTab.classList.remove(...inactiveClass)
+    activeTab.classList.add(...activeClass)
+  }
+
+  tabA.addEventListener('click', () => switchTab(tabA, viewA))
+  tabB.addEventListener('click', () => switchTab(tabB, viewB))
+  tabAnim.addEventListener('click', () => switchTab(tabAnim, viewAnim))
+
+  // Animation video overlay
+  const animItems = document.querySelectorAll('.anim-item')
+  const animVideos = Array.from(animItems).map(item => (item as HTMLElement).dataset.video!)
+  let currentAnimIndex = 0
+
+  function openVideo(index: number) {
+    currentAnimIndex = index
+    const video = animVideos[currentAnimIndex]
+    let overlay = document.getElementById('video-overlay')
+    if (!overlay) {
+      overlay = document.createElement('div')
+      overlay.id = 'video-overlay'
+      overlay.className = 'fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-8'
+      overlay.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement
+        if (target.closest('#video-frame') || target.closest('#video-prev') || target.closest('#video-next')) return
+        closeVideo()
+      })
+      document.body.appendChild(overlay)
+      document.body.style.overflow = 'hidden'
+    }
+    overlay.innerHTML = `
+      <button id="video-prev" class="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/20 hover:bg-white/40 grid place-items-center z-10 transition-colors"><svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg></button>
+      <iframe id="video-frame" src="${video}?autoplay=1" class="w-full max-w-5xl aspect-video rounded-xl" allowfullscreen frameborder="0" allow="autoplay"></iframe>
+      <button id="video-next" class="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/20 hover:bg-white/40 grid place-items-center z-10 transition-colors"><svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    `
+    overlay.querySelector('#video-prev')!.addEventListener('click', () => {
+      openVideo((currentAnimIndex - 1 + animVideos.length) % animVideos.length)
+    })
+    overlay.querySelector('#video-next')!.addEventListener('click', () => {
+      openVideo((currentAnimIndex + 1) % animVideos.length)
+    })
+  }
+
+  function closeVideo() {
+    const overlay = document.getElementById('video-overlay')
+    if (overlay) {
+      overlay.remove()
+      document.body.style.overflow = ''
+    }
+  }
+
+  animItems.forEach((item, i) => {
+    item.addEventListener('click', () => openVideo(i))
+  })
+
+  document.addEventListener('keydown', (e) => {
+    const overlay = document.getElementById('video-overlay')
+    if (!overlay) return
+    if (e.key === 'Escape') closeVideo()
+    if (e.key === 'ArrowLeft') openVideo((currentAnimIndex - 1 + animVideos.length) % animVideos.length)
+    if (e.key === 'ArrowRight') openVideo((currentAnimIndex + 1) % animVideos.length)
+  })
+</script>

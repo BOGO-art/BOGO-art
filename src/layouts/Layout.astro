@@ -1,0 +1,118 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+}
+
+const { title = 'Portfolio' } = Astro.props
+---
+
+<!doctype html>
+<html lang="ko" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="일러스트 & 애니메이션 포트폴리오" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-[#0f1210] text-zinc-100">
+    <nav class="fixed top-0 w-full z-50 bg-[#0f1210]/80 backdrop-blur-md border-b border-zinc-800">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/BOGO-art/" class="text-lg font-bold tracking-tight" id="nav-home">BOGO</a>
+      </div>
+    </nav>
+    <main class="pt-16">
+      <slot />
+    </main>
+    <div id="scroll-dots" class="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
+      <button class="scroll-dot w-3 h-3 rounded-full bg-white transition-all" data-index="0"></button>
+      <button class="scroll-dot w-3 h-3 rounded-full bg-zinc-600 transition-all" data-index="1"></button>
+      <button class="scroll-dot w-3 h-3 rounded-full bg-zinc-600 transition-all" data-index="2"></button>
+    </div>
+    <script is:inline>
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual'
+      }
+      window.scrollTo(0, 0)
+      const sections = document.querySelectorAll('.scroll-snap-section')
+      let currentSection = 0
+      let isAnimating = false
+
+      function goToSection(index) {
+        if (index < 0 || index >= sections.length || isAnimating) return
+        isAnimating = true
+        currentSection = index
+        const target = sections[currentSection]
+        const navHeight = document.querySelector('nav').offsetHeight
+        const top = target.offsetTop - navHeight
+        window.scrollTo({ top: top, behavior: 'smooth' })
+        setTimeout(() => { isAnimating = false }, 700)
+      }
+
+      // Smooth transition via CSS
+      let accumulatedDelta = 0
+      let deltaTimer = null
+
+      window.addEventListener('wheel', (e) => {
+        const scrollable = e.target.closest('#work-list, #work-list-b')
+        if (scrollable) return
+
+        e.preventDefault()
+        if (isAnimating) return
+
+        accumulatedDelta += e.deltaY
+        clearTimeout(deltaTimer)
+        deltaTimer = setTimeout(() => { accumulatedDelta = 0 }, 200)
+
+        if (Math.abs(accumulatedDelta) > 50) {
+          if (accumulatedDelta > 0) {
+            goToSection(currentSection + 1)
+          } else {
+            goToSection(currentSection - 1)
+          }
+          accumulatedDelta = 0
+        }
+      }, { passive: false })
+
+      const dots = document.querySelectorAll('.scroll-dot')
+
+      function updateDots() {
+        dots.forEach((dot, i) => {
+          if (i === currentSection) {
+            dot.classList.remove('bg-zinc-600')
+            dot.classList.add('bg-white')
+          } else {
+            dot.classList.remove('bg-white')
+            dot.classList.add('bg-zinc-600')
+          }
+        })
+      }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          goToSection(parseInt(dot.dataset.index))
+        })
+      })
+
+      const origGoToSection = goToSection
+      goToSection = function(index) {
+        if (index < 0 || index >= sections.length || isAnimating) return
+        isAnimating = true
+        currentSection = index
+        const target = sections[currentSection]
+        const navHeight = document.querySelector('nav').offsetHeight
+        const top = target.offsetTop - navHeight
+        window.scrollTo({ top: top, behavior: 'smooth' })
+        updateDots()
+        setTimeout(() => { isAnimating = false }, 700)
+      }
+
+      document.getElementById('nav-home').addEventListener('click', (e) => {
+        e.preventDefault()
+        goToSection(0)
+      })
+    </script>
+  </body>
+</html>

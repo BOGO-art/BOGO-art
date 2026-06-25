@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+#work-list, #work-list-b {
+  scrollbar-width: none;
+}
+#work-list::-webkit-scrollbar, #work-list-b::-webkit-scrollbar {
+  display: none;
+}
+
+@theme {
+  --font-sans: 'Pretendard', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  overflow: auto;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
