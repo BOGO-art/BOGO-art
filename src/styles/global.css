@@ -10,7 +10,7 @@
 }
 
 @theme {
-  --font-sans: 'Pretendard', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Outfit', 'Pretendard', system-ui, -apple-system, sans-serif;
 }
 
 html {
