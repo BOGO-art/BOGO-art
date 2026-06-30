@@ -329,18 +329,14 @@ const categories = [
     <div class="flex items-center justify-between w-full gap-12 max-w-6xl mx-auto">
       <!-- Left text -->
       <div class="flex-1">
-        <p class="text-sm font-semibold text-rose-400 tracking-widest uppercase mb-4">Portfolio</p>
-        <h1 class="text-7xl md:text-9xl font-extrabold tracking-tight mb-6 text-zinc-800 leading-tight">
+        <h1 class="text-7xl md:text-9xl font-extrabold tracking-tight mb-2 text-[#5a7a5a] leading-tight">
           BOGO
         </h1>
-        <p class="text-xl text-zinc-500 mb-3" data-i18n="subtitle">Illustrator & Animator</p>
-        <p class="text-zinc-400 max-w-md mb-8" data-i18n="desc">
-          감성있는 캐릭터와 공간감 있는 배경 일러스트를 만듭니다.
-        </p>
+        <p class="text-xl text-zinc-500 mb-8" data-i18n="subtitle">Illustrator & Animator</p>
         <div class="flex gap-3">
           <a href="https://x.com/huk1325" target="_blank" class="w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center shadow-sm hover:shadow-md hover:border-zinc-300 transition-all relative">
             <svg class="w-4 h-4 text-zinc-600" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-rose-400 text-white text-[8px] font-bold flex items-center justify-center">KR</span>
+            <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#5a7a5a] text-white text-[8px] font-bold flex items-center justify-center">KR</span>
           </a>
           <a href="https://x.com/yongsadragon" target="_blank" class="w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center shadow-sm hover:shadow-md hover:border-zinc-300 transition-all relative">
             <svg class="w-4 h-4 text-zinc-600" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -355,7 +351,7 @@ const categories = [
         </div>
       </div>
       <!-- Right hero image -->
-      <div class="absolute right-0 top-[10%] w-[50vw] h-[80%] overflow-hidden" style="clip-path: ellipse(85% 100% at 100% 50%);">
+      <div class="absolute right-0 top-[10%] w-[50vw] h-[70%] overflow-hidden" style="clip-path: ellipse(85% 100% at 100% 50%);">
         <div id="hero-slider" class="relative w-full h-full overflow-hidden">
           <img class="hero-slide absolute inset-0 w-full h-full object-cover blur-[3px] brightness-[0.85]" src="/BOGO-art/works/Aart2.jfif" />
           <img class="hero-slide absolute inset-0 w-full h-full object-cover blur-[3px] brightness-[0.85]" style="transform:translateX(100%)" src="/BOGO-art/works/Aart3.jfif" />
@@ -366,42 +362,34 @@ const categories = [
 
 
   <!-- Works -->
-  <section id="works" class="max-w-6xl mx-auto px-6 pt-4 pb-6 h-screen scroll-snap-section">
-    <!-- Works Landing -->
-    <div id="works-landing" class="flex flex-col items-center justify-center h-[80vh]">
-      <h2 class="text-6xl md:text-8xl font-extrabold mb-12 text-zinc-800">Works</h2>
-      <div class="flex gap-6">
-        <button class="works-landing-btn w-64 h-36 rounded-2xl text-xl font-medium text-white relative overflow-hidden transition-all hover:scale-105 ring-1 border border-zinc-200 shadow-lg hover:shadow-xl" data-tab="tab-illust-a">
-          <img src="/BOGO-art/works/Aart7.jfif" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.5]" />
+  <section id="works" class="max-w-6xl mx-auto px-6 pt-0 pb-0 h-screen scroll-snap-section overflow-hidden">
+    <!-- Works Cards (act as both landing and tabs) -->
+    <div id="works-cards" class="flex flex-col items-center justify-center transition-all duration-700 ease-in-out" style="height:80vh">
+      <h2 id="works-title" class="text-6xl md:text-8xl font-extrabold mb-12 text-[#5a7a5a] transition-all duration-700">Works</h2>
+      <div id="works-card-row" class="flex gap-6 transition-all duration-700">
+        <button class="works-landing-btn group w-80 h-48 rounded-2xl text-xl font-medium text-white relative overflow-hidden transition-all duration-500 hover:scale-105 ring-1 border border-zinc-200 shadow-lg hover:shadow-xl" data-tab="tab-illust-a">
+          <img src="/BOGO-art/works/Aart7.jfif" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.5] group-hover:brightness-[0.7] transition-all duration-300" />
           <div class="absolute inset-0 bg-black/30"></div>
-          <span class="relative z-10 font-bold drop-shadow-lg" data-i18n="fairytale_btn">동화<br/>일러스트</span>
+          <span class="relative z-10 font-bold drop-shadow-lg" data-i18n="fairytale_btn">동화 일러스트</span>
         </button>
-        <button class="works-landing-btn w-64 h-36 rounded-2xl text-xl font-medium text-white relative overflow-hidden transition-all hover:scale-105 ring-1 border border-zinc-200 shadow-lg hover:shadow-xl" data-tab="tab-illust-b">
-          <img src="/BOGO-art/works/Bart4.jfif" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.5]" />
+        <button class="works-landing-btn group w-80 h-48 rounded-2xl text-xl font-medium text-white relative overflow-hidden transition-all duration-500 hover:scale-105 ring-1 border border-zinc-200 shadow-lg hover:shadow-xl" data-tab="tab-illust-b">
+          <img src="/BOGO-art/works/Bart4.jfif" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.5] group-hover:brightness-[0.7] transition-all duration-300" />
           <div class="absolute inset-0 bg-black/30"></div>
-          <span class="relative z-10 font-bold drop-shadow-lg" data-i18n="character_btn">캐릭터<br/>일러스트</span>
+          <span class="relative z-10 font-bold drop-shadow-lg" data-i18n="character_btn">캐릭터 일러스트</span>
         </button>
-        <button class="works-landing-btn w-64 h-36 rounded-2xl text-xl font-bold text-white relative overflow-hidden transition-all hover:scale-105 ring-1 border border-zinc-200 shadow-lg hover:shadow-xl" data-tab="tab-animation">
-          <img src="https://img.youtube.com/vi/QA-COeEx6FA/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.5]" />
+        <button class="works-landing-btn group w-80 h-48 rounded-2xl text-xl font-bold text-white relative overflow-hidden transition-all duration-500 hover:scale-105 ring-1 border border-zinc-200 shadow-lg hover:shadow-xl" data-tab="tab-animation">
+          <img src="https://img.youtube.com/vi/QA-COeEx6FA/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover blur-[2px] brightness-[0.5] group-hover:brightness-[0.7] transition-all duration-300" />
           <div class="absolute inset-0 bg-black/30"></div>
           <span class="relative z-10 font-bold drop-shadow-lg" data-i18n="animation_btn">애니메이션</span>
         </button>
       </div>
     </div>
 
-    <!-- Works Content (hidden initially) -->
-    <div id="works-content" class="hidden h-[80vh]">
-      <div class="flex items-center gap-4 mb-8">
-        <h2 class="text-3xl font-extrabold text-zinc-800">Works</h2>
-        <div class="flex gap-2">
-          <button id="tab-illust-a" class="tab-btn px-4 py-2 rounded-full text-sm bg-rose-400 text-white transition-colors" data-i18n="fairytale_tab">동화 일러스트</button>
-          <button id="tab-illust-b" class="tab-btn px-4 py-2 rounded-full text-sm bg-white text-zinc-500 border border-zinc-200 shadow-sm hover:bg-zinc-50 transition-colors" data-i18n="character_tab">캐릭터 일러스트</button>
-          <button id="tab-animation" class="tab-btn px-4 py-2 rounded-full text-sm bg-white text-zinc-500 border border-zinc-200 shadow-sm hover:bg-zinc-50 transition-colors" data-i18n="animation_tab">애니메이션</button>
-        </div>
-      </div>
+    <!-- Works Content -->
+    <div id="works-content" class="opacity-0 transition-all duration-700 overflow-hidden" style="max-height:0">
 
     <!-- Illust A View -->
-    <div id="view-illust-a" class="flex h-[80vh] gap-4">
+    <div id="view-illust-a" class="flex h-full gap-4">
       <div class="flex flex-col items-center justify-center gap-2 pr-2" id="dots-a">
         {works.filter(w => w.category === 'illust-a').map((_, i) => (
           <div class:list={['illust-a-dot w-2 h-2 rounded-full transition-all', i === 0 ? 'bg-white' : 'bg-zinc-300']} />
@@ -413,7 +401,7 @@ const categories = [
             <button
               class:list={[
                 'work-list-item rounded-lg overflow-hidden transition-all border-2 shrink-0',
-                'border-transparent hover:border-rose-300'
+                'border-transparent hover:border-[#6b8f6b]'
               ]}
               data-index={i}
               data-src={work.thumbnail}
@@ -447,7 +435,7 @@ const categories = [
             <button
               class:list={[
                 'work-list-item-b rounded-lg overflow-hidden transition-all border-2 shrink-0',
-                'border-transparent hover:border-rose-300'
+                'border-transparent hover:border-[#6b8f6b]'
               ]}
               data-index={i}
               data-src={work.thumbnail}
@@ -469,9 +457,9 @@ const categories = [
     </div>
 
     <!-- Animation View -->
-    <div id="view-animation" class="hidden h-[80vh] overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 content-start">
+    <div id="view-animation" class="hidden h-full overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 content-start">
       {works.filter(w => w.category === 'animation').map(work => (
-        <div class="anim-item aspect-video rounded-2xl overflow-hidden cursor-pointer relative group shadow-lg border border-zinc-200 hover:border-rose-300 transition-all" data-video={work.video}>
+        <div class="anim-item aspect-video rounded-2xl overflow-hidden cursor-pointer relative group shadow-lg border border-zinc-200 hover:border-[#6b8f6b] transition-all" data-video={work.video}>
           <img src={work.thumbnail} alt={work.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
             <div class="w-14 h-14 rounded-full bg-white/40 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/60 transition-all">
@@ -491,24 +479,23 @@ const categories = [
     <div class="flex gap-10 items-start">
       <!-- Profile card -->
       <div class="relative shrink-0">
-        <img src="/BOGO-art/works/mainchara.jpg" alt="BOGO" class="relative w-36 h-36 rounded-2xl object-cover border border-zinc-200" />
+        <img src="/BOGO-art/works/mainchara.jpg" alt="BOGO" class="relative w-52 h-52 rounded-2xl object-cover border border-zinc-200 shadow-md" />
       </div>
       <div class="flex-1">
         <p class="text-lg text-zinc-700 leading-relaxed mb-6" data-i18n="about_desc">
           안녕하세요, BOGO입니다.<br />
           일러스트와 애니메이션 전문 아티스트입니다.
         </p>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 gap-6">
           <div class="bg-white rounded-xl p-5 border border-zinc-200 shadow-sm">
-            <h3 class="text-xs font-semibold text-rose-400 uppercase tracking-wider mb-3" data-i18n="career_title">경력</h3>
+            <h3 class="text-xs font-semibold text-[#5a7a5a] uppercase tracking-wider mb-3" data-i18n="career_title">경력</h3>
             <ul class="text-zinc-600 text-sm space-y-2">
               <li data-i18n="career_1">- 게임 "트릭컬 : 리바이브" 공식 만화작가</li>
               <li data-i18n="career_2">- 게임 "PUMP IT UP - RISE" 애니메이션 작업</li>
               <li data-i18n="career_3">- 게임 "식당 아피에라" 메인 아트</li>
             </ul>
-          </div>
-          <div class="bg-white rounded-xl p-5 border border-zinc-200 shadow-sm">
-            <h3 class="text-xs font-semibold text-rose-300 uppercase tracking-wider mb-3" data-i18n="tools_title">사용 툴</h3>
+
+            <h3 class="text-xs font-semibold text-[#6b8f6b] uppercase tracking-wider mb-3 mt-4" data-i18n="tools_title">사용 툴</h3>
             <div class="flex flex-wrap gap-2">
               {['Clip Studio', 'ibis Paint'].map(tool => (
                 <span class="px-3 py-1.5 bg-zinc-100 border border-zinc-200 rounded-lg text-sm text-zinc-600">{tool}</span>
@@ -589,11 +576,11 @@ const categories = [
       }, 150)
 
       listItems.forEach(li => {
-        li.classList.remove('border-rose-400')
+        li.classList.remove('border-[#5a7a5a]')
         li.classList.add('border-transparent')
       })
       el.classList.remove('border-transparent')
-      el.classList.add('border-rose-400')
+      el.classList.add('border-[#5a7a5a]')
 
       const idx = parseInt(el.dataset.index!)
       dots.forEach((d, i) => {
@@ -660,46 +647,77 @@ const categories = [
   setupListViewer('work-list', 'work-list-item', 'preview-image-a', 'illust-a-dot')
   setupListViewer('work-list-b', 'work-list-item-b', 'preview-image-b', 'illust-b-dot')
 
-  // Works landing
-  const worksLanding = document.getElementById('works-landing')!
+  // Works cards + content
+  const worksCards = document.getElementById('works-cards')!
+  const worksTitle = document.getElementById('works-title')!
+  const worksCardRow = document.getElementById('works-card-row')!
   const worksContent = document.getElementById('works-content')!
-
-  document.querySelectorAll('.works-landing-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      worksLanding.classList.add('hidden')
-      worksContent.classList.remove('hidden')
-      const tabId = (btn as HTMLElement).dataset.tab!
-      document.getElementById(tabId)!.click()
-    })
-  })
-
-  // Tab switching
-  const tabA = document.getElementById('tab-illust-a')!
-  const tabB = document.getElementById('tab-illust-b')!
-  const tabAnim = document.getElementById('tab-animation')!
   const viewA = document.getElementById('view-illust-a')!
   const viewB = document.getElementById('view-illust-b')!
   const viewAnim = document.getElementById('view-animation')!
-
-  const allTabs = [tabA, tabB, tabAnim]
   const allViews = [viewA, viewB, viewAnim]
-  const activeClass = ['bg-rose-400', 'text-white']
-  const inactiveClass = ['bg-white', 'text-zinc-500', 'border', 'border-zinc-200', 'shadow-sm']
+  const allCards = document.querySelectorAll('.works-landing-btn')
+  let worksExpanded = false
 
-  function switchTab(activeTab: HTMLElement, activeView: HTMLElement) {
+  function expandWorks(tabId: string) {
+    if (!worksExpanded) {
+      worksExpanded = true
+      // Shrink cards - keep justify-center, just reduce height
+      worksCards.style.height = '5rem'
+      worksCards.style.overflow = 'visible'
+      worksTitle.classList.add('text-2xl', 'md:text-2xl', 'mb-2')
+      worksTitle.classList.remove('text-6xl', 'md:text-8xl', 'mb-12')
+      allCards.forEach(card => {
+        const c = card as HTMLElement
+        c.classList.remove('h-48', 'text-xl')
+        c.classList.add('h-12', 'text-sm')
+        const img = c.querySelector('img') as HTMLElement
+        if (img) {
+          img.classList.add('transition-opacity', 'duration-700')
+          img.classList.add('opacity-0')
+        }
+        const overlay = c.querySelector('div.absolute') as HTMLElement
+        if (overlay) {
+          overlay.style.transition = 'background 700ms ease-in-out'
+          overlay.style.background = '#5a7a5a'
+        }
+      })
+      worksCardRow.classList.remove('gap-6')
+      worksCardRow.classList.add('gap-3')
+      // Show content
+      setTimeout(() => {
+        worksContent.style.maxHeight = 'calc(100vh - 10rem)'
+        worksContent.style.marginTop = '1.5rem'
+        worksContent.classList.remove('opacity-0')
+        worksContent.classList.add('opacity-100')
+      }, 100)
+    }
+    // Switch view
+    const viewMap: Record<string, HTMLElement> = {
+      'tab-illust-a': viewA,
+      'tab-illust-b': viewB,
+      'tab-animation': viewAnim,
+    }
     allViews.forEach(v => v.classList.add('hidden'))
-    activeView.classList.remove('hidden')
-    allTabs.forEach(t => {
-      t.classList.remove(...activeClass)
-      t.classList.add(...inactiveClass)
+    viewMap[tabId]?.classList.remove('hidden')
+
+    // Highlight active card
+    allCards.forEach(card => {
+      const c = card as HTMLElement
+      if (c.dataset.tab === tabId) {
+        c.classList.add('ring-2', 'ring-[#5a7a5a]')
+      } else {
+        c.classList.remove('ring-2', 'ring-[#5a7a5a]')
+      }
     })
-    activeTab.classList.remove(...inactiveClass)
-    activeTab.classList.add(...activeClass)
   }
 
-  tabA.addEventListener('click', () => switchTab(tabA, viewA))
-  tabB.addEventListener('click', () => switchTab(tabB, viewB))
-  tabAnim.addEventListener('click', () => switchTab(tabAnim, viewAnim))
+  allCards.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabId = (btn as HTMLElement).dataset.tab!
+      expandWorks(tabId)
+    })
+  })
 
   // Animation video overlay
   const animItems = document.querySelectorAll('.anim-item')
@@ -759,8 +777,8 @@ const categories = [
     ko: {
       subtitle: 'Illustrator & Animator',
       desc: '감성있는 캐릭터와 공간감 있는 배경 일러스트를 만듭니다.',
-      fairytale_btn: '동화<br/>일러스트',
-      character_btn: '캐릭터<br/>일러스트',
+      fairytale_btn: '동화 일러스트',
+      character_btn: '캐릭터 일러스트',
       animation_btn: '애니메이션',
       fairytale_tab: '동화 일러스트',
       character_tab: '캐릭터 일러스트',
